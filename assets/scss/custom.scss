@@ -1,126 +1,284 @@
----
-title: "Nimisha Pokam"
-description: "Data Analytics Portfolio"
----
+/* ============================================================
+   Nimisha Pokam — Homepage Custom Styles
+   Place this file at: assets/scss/custom.scss
+   in your hugo-theme repo (NimishaPokam/hugo-theme)
+   ============================================================ */
 
-{{< raw >}}
-<style>
-/* Inline override — hides default Stack article padding on homepage */
-.main-article { padding: 0 !important; max-width: 100% !important; }
-.main-article > header { display: none !important; }
-</style>
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@400;500&display=swap');
 
-<!-- ═══════════════════════════════════════
-     HERO
-════════════════════════════════════════ -->
-<section class="home-hero">
+/* ── Variables ─────────────────────────────────────────────── */
+:root {
+  --red:    #E8291C;
+  --black:  #0E0E0E;
+  --white:  #FAFAF8;
+  --cream:  #F5F2EC;
+  --serif:  'Playfair Display', Georgia, serif;
+  --sans:   'Inter', sans-serif;
+}
 
-  <!-- sparkles -->
-  <span class="sparkle" style="top:10%;left:8%">
-    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <path d="M12 2 L13.5 10.5 L22 12 L13.5 13.5 L12 22 L10.5 13.5 L2 12 L10.5 10.5 Z"/>
-    </svg>
-  </span>
-  <span class="sparkle" style="top:18%;right:10%;width:18px;height:18px">
-    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <path d="M12 2 L13.5 10.5 L22 12 L13.5 13.5 L12 22 L10.5 13.5 L2 12 L10.5 10.5 Z"/>
-    </svg>
-  </span>
-  <span class="sparkle" style="bottom:20%;left:15%;width:16px;height:16px">
-    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <path d="M12 2 L13.5 10.5 L22 12 L13.5 13.5 L12 22 L10.5 13.5 L2 12 L10.5 10.5 Z"/>
-    </svg>
-  </span>
-  <span class="sparkle" style="bottom:25%;right:12%;width:22px;height:22px">
-    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <path d="M12 2 L13.5 10.5 L22 12 L13.5 13.5 L12 22 L10.5 13.5 L2 12 L10.5 10.5 Z"/>
-    </svg>
-  </span>
+/* ── Reset body background for homepage ─────────────────────── */
+body {
+  background: var(--white);
+  font-family: var(--sans);
+}
 
-  <p class="home-hero__eyebrow">Data Analytics Portfolio</p>
+/* ── Hide default Stack theme article header on homepage ─────── */
+.main-article > header,
+.main-article > .article-content > h1:first-child,
+.widget--toc {
+  display: none;
+}
 
-  <h1 class="home-hero__title">
-    Welcome to My<br>
-    <em>Data Analytics</em><br>
-    Portfolio!
-  </h1>
+/* ============================================================
+   HERO SECTION
+   ============================================================ */
+.home-hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 7rem 2rem 5rem;
+  background: var(--white);
+  position: relative;
+}
 
-  <p class="home-hero__sub">
-    Hi, I'm Nimisha Pokam, a data enthusiast based in Chicago.
-    I specialize in transforming raw data into actionable insights
-    that drive informed decision-making and innovation.
-  </p>
+.home-hero__eyebrow {
+  font-family: var(--sans);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--red);
+  margin-bottom: 1.5rem;
+}
 
-  <div class="home-hero__links">
-    <a href="/projects" class="home-hero__btn home-hero__btn--red">View Projects</a>
-    <a href="/career" class="home-hero__btn">My Experience</a>
-    <a href="mailto:pnimisha@depaul.edu" class="home-hero__btn">Get in Touch</a>
-  </div>
+.home-hero__title {
+  font-family: var(--serif);
+  font-size: clamp(3rem, 7vw, 6rem);
+  font-weight: 900;
+  line-height: 1.0;
+  text-transform: uppercase;
+  letter-spacing: -0.01em;
+  color: var(--black);
+  margin: 0 0 2rem;
+  max-width: 900px;
+}
 
-</section>
+.home-hero__title em {
+  font-style: normal;
+  color: var(--red);
+  -webkit-text-stroke: 0px;
+}
 
-<!-- ═══════════════════════════════════════
-     WHAT YOU'LL FIND — browser window right, heading left
-════════════════════════════════════════ -->
-<section class="home-section">
-  <div class="home-row">
+.home-hero__sub {
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.75;
+  color: #444;
+  max-width: 480px;
+  margin: 0 auto 2.5rem;
+}
 
-    <div class="home-heading">
-      What You'll<br>Find in My<br>Portfolio
-    </div>
+.home-hero__links {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
 
-    <div class="browser-box">
-      <div class="browser-box__titlebar">
-        <span class="browser-box__dot"></span>
-        <span class="browser-box__dot"></span>
-        <span class="browser-box__dot"></span>
-      </div>
-      <div class="browser-box__body">
-        <ul>
-          <li>Visualizations using Tableau, Power BI, and Excel to present data in a clear and engaging way</li>
-          <li>Work in Python, SQL, and R — extracting insights from large datasets and combining multiple sources</li>
-          <li>Case studies and personal projects tackling real-world challenges using data-driven approaches</li>
-        </ul>
-      </div>
-    </div>
+.home-hero__btn {
+  font-family: var(--sans);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 10px 22px;
+  border: 1.5px solid var(--black);
+  background: transparent;
+  color: var(--black);
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+  border-radius: 0;
+}
 
-  </div>
+.home-hero__btn:hover {
+  background: var(--black);
+  color: var(--white);
+}
 
-  <!-- ═══════════════════════════════════════
-       MY APPROACH TO DATA — browser window left, heading right
-  ════════════════════════════════════════ -->
-  <div class="home-row home-row--reverse">
+.home-hero__btn--red {
+  background: var(--red);
+  border-color: var(--red);
+  color: var(--white);
+}
 
-    <div class="browser-box">
-      <div class="browser-box__titlebar">
-        <span class="browser-box__dot"></span>
-        <span class="browser-box__dot"></span>
-        <span class="browser-box__dot"></span>
-      </div>
-      <div class="browser-box__body">
-        <p>For me, data is more than just numbers on a screen — it's a way to uncover stories, solve problems, and drive meaningful change. I love the process of digging into datasets, finding patterns, and turning those insights into something actionable.</p>
-        <p style="margin-top:1rem;">Whether I'm analysing trends or designing interactive dashboards, I always aim to make the data speak in a way that's clear, compelling, and impactful.</p>
-      </div>
-    </div>
+.home-hero__btn--red:hover {
+  background: #c41f14;
+  border-color: #c41f14;
+  color: var(--white);
+}
 
-    <div class="home-heading">
-      My<br>Approach<br>to Data
-    </div>
+/* ── Sparkle decorations ─────────────────────────────────────── */
+.sparkle {
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  color: var(--red);
+  pointer-events: none;
+}
 
-  </div>
+.sparkle svg {
+  width: 100%;
+  height: 100%;
+  fill: currentColor;
+}
 
-</section>
+/* ============================================================
+   SECTION: "WHAT YOU'LL FIND"  (browser window left)
+   ============================================================ */
+.home-section {
+  padding: 4rem 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
 
-<!-- ═══════════════════════════════════════
-     FOOTER CONTACT STRIP
-════════════════════════════════════════ -->
-<div class="home-footer-strip">
-  Let's connect —
-  <a href="mailto:pnimisha@depaul.edu">pnimisha@depaul.edu</a>
-  <a href="https://www.linkedin.com/in/nimisha-p-b1b9922a9/" target="_blank">LinkedIn</a>
-  <a href="https://github.com/NimishaPokam" target="_blank">GitHub</a>
-</div>
+.home-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+  margin-bottom: 5rem;
+}
 
-{{< /raw >}}/*
-    You can add your own custom styles here.
-*/
+.home-row--reverse {
+  direction: rtl;
+}
+
+.home-row--reverse > * {
+  direction: ltr;
+}
+
+/* ── Big heading on one side ─────────────────────────────────── */
+.home-heading {
+  font-family: var(--serif);
+  font-size: clamp(2.2rem, 4vw, 3.8rem);
+  font-weight: 900;
+  text-transform: uppercase;
+  line-height: 1.05;
+  color: var(--black);
+  position: relative;
+}
+
+/* ── Retro browser window box ────────────────────────────────── */
+.browser-box {
+  border: 2px solid var(--red);
+  border-radius: 0;
+  background: var(--white);
+  position: relative;
+}
+
+.browser-box__titlebar {
+  background: var(--white);
+  border-bottom: 2px solid var(--red);
+  padding: 7px 12px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.browser-box__dot {
+  width: 11px;
+  height: 11px;
+  border: 1.5px solid var(--red);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.browser-box__body {
+  padding: 1.5rem 1.75rem 2rem;
+  font-family: var(--sans);
+  font-size: 14px;
+  line-height: 1.8;
+  color: #333;
+}
+
+.browser-box__body ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.browser-box__body ul li {
+  padding: 0.35rem 0;
+  padding-left: 1.25rem;
+  position: relative;
+  border-bottom: 1px dashed #ddd;
+}
+
+.browser-box__body ul li:last-child {
+  border-bottom: none;
+}
+
+.browser-box__body ul li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: var(--red);
+  font-size: 12px;
+}
+
+/* ============================================================
+   SECTION: "MY APPROACH TO DATA"  (browser window right)
+   ============================================================ */
+
+/* reuse .home-row--reverse + .browser-box + .home-heading */
+
+/* ============================================================
+   INLINE CONTENT OVERRIDE
+   Hugo renders _index.md content inside .article-content
+   We wrap it so we can style sections independently.
+   Since Hugo doesn't add classes to raw markdown content,
+   we target the headings + following siblings.
+   ============================================================ */
+
+/* Hide the raw markdown default rendering on homepage */
+.main-article .article-content {
+  display: none;
+}
+
+/* ============================================================
+   FOOTER STRIP
+   ============================================================ */
+.home-footer-strip {
+  text-align: center;
+  padding: 3rem 2rem 5rem;
+  font-family: var(--sans);
+  font-size: 13px;
+  color: #888;
+  border-top: 1px solid #e0e0e0;
+}
+
+.home-footer-strip a {
+  color: var(--red);
+  text-decoration: none;
+  margin: 0 0.5rem;
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 768px) {
+  .home-row {
+    grid-template-columns: 1fr;
+  }
+
+  .home-row--reverse {
+    direction: ltr;
+  }
+
+  .home-hero__title {
+    font-size: 2.8rem;
+  }
+}
