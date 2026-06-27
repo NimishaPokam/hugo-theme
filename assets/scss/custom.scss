@@ -1,3 +1,126 @@
-/*
+---
+title: "Nimisha Pokam"
+description: "Data Analytics Portfolio"
+---
+
+{{< raw >}}
+<style>
+/* Inline override — hides default Stack article padding on homepage */
+.main-article { padding: 0 !important; max-width: 100% !important; }
+.main-article > header { display: none !important; }
+</style>
+
+<!-- ═══════════════════════════════════════
+     HERO
+════════════════════════════════════════ -->
+<section class="home-hero">
+
+  <!-- sparkles -->
+  <span class="sparkle" style="top:10%;left:8%">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M12 2 L13.5 10.5 L22 12 L13.5 13.5 L12 22 L10.5 13.5 L2 12 L10.5 10.5 Z"/>
+    </svg>
+  </span>
+  <span class="sparkle" style="top:18%;right:10%;width:18px;height:18px">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M12 2 L13.5 10.5 L22 12 L13.5 13.5 L12 22 L10.5 13.5 L2 12 L10.5 10.5 Z"/>
+    </svg>
+  </span>
+  <span class="sparkle" style="bottom:20%;left:15%;width:16px;height:16px">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M12 2 L13.5 10.5 L22 12 L13.5 13.5 L12 22 L10.5 13.5 L2 12 L10.5 10.5 Z"/>
+    </svg>
+  </span>
+  <span class="sparkle" style="bottom:25%;right:12%;width:22px;height:22px">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M12 2 L13.5 10.5 L22 12 L13.5 13.5 L12 22 L10.5 13.5 L2 12 L10.5 10.5 Z"/>
+    </svg>
+  </span>
+
+  <p class="home-hero__eyebrow">Data Analytics Portfolio</p>
+
+  <h1 class="home-hero__title">
+    Welcome to My<br>
+    <em>Data Analytics</em><br>
+    Portfolio!
+  </h1>
+
+  <p class="home-hero__sub">
+    Hi, I'm Nimisha Pokam, a data enthusiast based in Chicago.
+    I specialize in transforming raw data into actionable insights
+    that drive informed decision-making and innovation.
+  </p>
+
+  <div class="home-hero__links">
+    <a href="/projects" class="home-hero__btn home-hero__btn--red">View Projects</a>
+    <a href="/career" class="home-hero__btn">My Experience</a>
+    <a href="mailto:pnimisha@depaul.edu" class="home-hero__btn">Get in Touch</a>
+  </div>
+
+</section>
+
+<!-- ═══════════════════════════════════════
+     WHAT YOU'LL FIND — browser window right, heading left
+════════════════════════════════════════ -->
+<section class="home-section">
+  <div class="home-row">
+
+    <div class="home-heading">
+      What You'll<br>Find in My<br>Portfolio
+    </div>
+
+    <div class="browser-box">
+      <div class="browser-box__titlebar">
+        <span class="browser-box__dot"></span>
+        <span class="browser-box__dot"></span>
+        <span class="browser-box__dot"></span>
+      </div>
+      <div class="browser-box__body">
+        <ul>
+          <li>Visualizations using Tableau, Power BI, and Excel to present data in a clear and engaging way</li>
+          <li>Work in Python, SQL, and R — extracting insights from large datasets and combining multiple sources</li>
+          <li>Case studies and personal projects tackling real-world challenges using data-driven approaches</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ═══════════════════════════════════════
+       MY APPROACH TO DATA — browser window left, heading right
+  ════════════════════════════════════════ -->
+  <div class="home-row home-row--reverse">
+
+    <div class="browser-box">
+      <div class="browser-box__titlebar">
+        <span class="browser-box__dot"></span>
+        <span class="browser-box__dot"></span>
+        <span class="browser-box__dot"></span>
+      </div>
+      <div class="browser-box__body">
+        <p>For me, data is more than just numbers on a screen — it's a way to uncover stories, solve problems, and drive meaningful change. I love the process of digging into datasets, finding patterns, and turning those insights into something actionable.</p>
+        <p style="margin-top:1rem;">Whether I'm analysing trends or designing interactive dashboards, I always aim to make the data speak in a way that's clear, compelling, and impactful.</p>
+      </div>
+    </div>
+
+    <div class="home-heading">
+      My<br>Approach<br>to Data
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ═══════════════════════════════════════
+     FOOTER CONTACT STRIP
+════════════════════════════════════════ -->
+<div class="home-footer-strip">
+  Let's connect —
+  <a href="mailto:pnimisha@depaul.edu">pnimisha@depaul.edu</a>
+  <a href="https://www.linkedin.com/in/nimisha-p-b1b9922a9/" target="_blank">LinkedIn</a>
+  <a href="https://github.com/NimishaPokam" target="_blank">GitHub</a>
+</div>
+
+{{< /raw >}}/*
     You can add your own custom styles here.
 */
